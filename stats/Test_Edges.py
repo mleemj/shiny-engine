@@ -33,7 +33,7 @@ class TestEdges(unittest.TestCase):
         mediator.print_graph()
 
     def test_add_edges(self):
-        print('test_add_edges')
+        self.assertTrue(True)
         movies_row = list([1,2,3,4])
         age_col = list([18, 19, 20, 21])
         movies_age_model = product(movies_row, age_col)
@@ -42,7 +42,7 @@ class TestEdges(unittest.TestCase):
 
         data_model = defaultdict(list)
         for movie, age in movies_age_model:
-            if random.random() > 1.0:
+            if random.random() > 0.5:
                 data_model[movie].append(age)
 
         mediator.mark_visited_nodes(data_model)
