@@ -1,8 +1,7 @@
 import random
 import unittest
-from itertools import product
-
 from collections import defaultdict
+from itertools import product
 
 from stats.Graph_View import PSearcher, Coord, PGraph, PNode
 from stats.Stats_Graph_Mediator import StatsGraphMediator, DataTuple
@@ -34,7 +33,7 @@ class TestEdges(unittest.TestCase):
 
     def test_add_edges(self):
         self.assertTrue(True)
-        movies_row = list([1,2,3,4])
+        movies_row = list([1, 2, 3, 4])
         age_col = list([18, 19, 20, 21])
         movies_age_model = product(movies_row, age_col)
 
@@ -86,17 +85,9 @@ class TestEdges(unittest.TestCase):
         for node in list_visited_nodes:
             print()
             connected_nodes = path_searcher.dfs_search(node, list())
-            print('start_node {}:{}:size = {}'.format(node.coord.row,
-                                               node.coord.col, len(connected_nodes)))
-            for cnode in connected_nodes:
-                self.assertIsInstance(cnode, PNode)
-                print('{}:{}'.format(cnode.coord.row, cnode.coord.col),
-                      end=' , ')
-            print()
-
-
-
-
+            print('dfs_start_node {}:{}\t length = {}'.format(
+                node.coord.row, node.coord.col,
+                len(connected_nodes)))
 
 
 if __name__ == '__main__':

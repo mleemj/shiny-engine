@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6de5de5-862a-4c85-8fda-50bdd8b3bd84" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stats/Test_BFS.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stats/Graph_View.py" afterPath="$PROJECT_DIR$/stats/Graph_View.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stats/Test_Cases_Suite.py" afterPath="$PROJECT_DIR$/stats/Test_Cases_Suite.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stats/Test_Edges.py" afterPath="$PROJECT_DIR$/stats/Test_Edges.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stats/Test_Helpers.py" afterPath="$PROJECT_DIR$/stats/Test_Helpers.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,10 +25,12 @@
     <SUITE FILE_PATH="coverage/shiny-engine$Unittests_in_TestStats.coverage" NAME="Unittests in Test_DStats Coverage Results" MODIFIED="1488993929162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittests_in_Test_Graph_Finder.coverage" NAME="Test_Graph_Finder Coverage Results" MODIFIED="1489718173877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Test_Mediator.coverage" NAME="Test_Mediator Coverage Results" MODIFIED="1489767421161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/shiny-engine$Test_Helpers.coverage" NAME="Test_Helpers Coverage Results" MODIFIED="1489807559416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittests_in_TestDFS.coverage" NAME="Unittests in TestDFS Coverage Results" MODIFIED="1489115294884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittests_in_stats.coverage" NAME="Unittests in stats Coverage Results" MODIFIED="1489205950295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittest_MyTestCase_test_something.coverage" NAME="Unittest TestHelpers.test_enumerate_product Coverage Results" MODIFIED="1489519891132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
-    <SUITE FILE_PATH="coverage/shiny-engine$Test_Cases_Suite.coverage" NAME="Test_Cases_Suite Coverage Results" MODIFIED="1489795950708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
+    <SUITE FILE_PATH="coverage/shiny-engine$Test_BFS.coverage" NAME="Test_BFS Coverage Results" MODIFIED="1489936727150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
+    <SUITE FILE_PATH="coverage/shiny-engine$Test_Cases_Suite.coverage" NAME="Test_Cases_Suite Coverage Results" MODIFIED="1489937216880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittest_TestStatsGraphMediator_test_build_graph.coverage" NAME="TestStatsGraphMediator Coverage Results" MODIFIED="1489438720682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$TestNodeSearch_Config.coverage" NAME="TestNodeSearch_Config Coverage Results" MODIFIED="1488745683567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittests_in_Test_Edges.coverage" NAME="Test_Edges Coverage Results" MODIFIED="1489788287008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
@@ -31,7 +38,9 @@
     <SUITE FILE_PATH="coverage/shiny-engine$Unittest_TestStatsSuite_test_stats.coverage" NAME="Unittests in TestStatsSuite Coverage Results" MODIFIED="1489212300826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$Unittests_in_TestStatsSuite.coverage" NAME="Unittests in TestStatsSuite Coverage Results" MODIFIED="1489283958590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$TestMediator.coverage" NAME="TestMediator Coverage Results" MODIFIED="1489682886906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/shiny-engine$Test_Edges.coverage" NAME="Test_Edges Coverage Results" MODIFIED="1489936486874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
     <SUITE FILE_PATH="coverage/shiny-engine$TestDiabetesStats.coverage" NAME="TestDiabetesStats Coverage Results" MODIFIED="1489283978449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/shiny-engine$Unittest_TestBFS_test_bfs.coverage" NAME="TestBFS.test_bfs Coverage Results" MODIFIED="1489809903065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/stats" />
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="1" />
@@ -52,66 +61,7 @@
     <favorites_list name="shiny-engine" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test_Edges.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stats/Test_Edges.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stats_Graph_Mediator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stats/Stats_Graph_Mediator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="153" column="34" lean-forward="false" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="salmon.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/salmon.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graph_View.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stats/Graph_View.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="181" column="42" lean-forward="false" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test_Cases_Suite.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stats/Test_Cases_Suite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,9 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>error</find>
-      <find>iter</find>
-      <find>SortedSet</find>
       <find>testT2DmGroup</find>
       <find>test_</find>
       <find>test_build_graph</find>
@@ -154,6 +101,9 @@
       <find>dict</find>
       <find>col_model</find>
       <find>_data_map</find>
+      <find>deq</find>
+      <find>stack</find>
+      <find>Size of BFS</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,14 +136,15 @@
         <option value="$PROJECT_DIR$/stats/Test_Stats_Graph_Mediator.py" />
         <option value="$PROJECT_DIR$/stats/Test_Mediator_Build_Graph.py" />
         <option value="$PROJECT_DIR$/stats/Test_Dm_Search.py" />
-        <option value="$PROJECT_DIR$/stats/Test_Helpers.py" />
         <option value="$PROJECT_DIR$/stats/Test_Mediator.py" />
-        <option value="$PROJECT_DIR$/stats/Test_Cases_Suite.py" />
         <option value="$PROJECT_DIR$/stats/Test_Graph_Finder.py" />
         <option value="$PROJECT_DIR$/stats/Test_Builder.py" />
-        <option value="$PROJECT_DIR$/stats/Graph_View.py" />
-        <option value="$PROJECT_DIR$/stats/Stats_Graph_Mediator.py" />
+        <option value="$PROJECT_DIR$/stats/Test_Helpers.py" />
         <option value="$PROJECT_DIR$/stats/Test_Edges.py" />
+        <option value="$PROJECT_DIR$/stats/Stats_Graph_Mediator.py" />
+        <option value="$PROJECT_DIR$/stats/Test_BFS.py" />
+        <option value="$PROJECT_DIR$/stats/Graph_View.py" />
+        <option value="$PROJECT_DIR$/stats/Test_Cases_Suite.py" />
       </list>
     </option>
   </component>
@@ -204,8 +155,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="93" />
     <option name="y" value="23" />
-    <option name="width" value="1366" />
+    <option name="width" value="1273" />
     <option name="height" value="697" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -226,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -266,6 +217,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,29 +251,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stats/Test_Cases_Suite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test_Builder" type="tests" factoryName="Unittests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stats" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="salmon" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stats/Test_Builder.py" />
-      <option name="CLASS_NAME" value="TestBuilder" />
-      <option name="METHOD_NAME" value="test_build_graph" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="Test_Graph_Finder" type="tests" factoryName="Unittests" temporary="true">
@@ -384,6 +313,29 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stats/Test_Edges.py" />
       <option name="CLASS_NAME" value="TestEdges" />
       <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test_BFS" type="tests" factoryName="Unittests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/stats" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="salmon" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stats/Test_BFS.py" />
+      <option name="CLASS_NAME" value="TestBFS" />
+      <option name="METHOD_NAME" value="test_bfs" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
       <option name="PATTERN" value="" />
@@ -681,18 +633,18 @@
       <item index="1" class="java.lang.String" itemvalue="Python tests.Test_Diabetes_Search" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.Test_Dm_Stats" />
       <item index="3" class="java.lang.String" itemvalue="Python.Test_Cases_Suite" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Test_Builder" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Test_Graph_Finder" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Test_Helpers" />
-      <item index="7" class="java.lang.String" itemvalue="Python tests.Test_Edges" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Test_Graph_Finder" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Test_Helpers" />
+      <item index="6" class="java.lang.String" itemvalue="Python tests.Test_Edges" />
+      <item index="7" class="java.lang.String" itemvalue="Python tests.Test_BFS" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Test_Cases_Suite" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Test_Edges" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Test_Graph_Finder" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Test_Builder" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Test_Helpers" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Test_BFS" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Test_Edges" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Test_Helpers" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Test_Graph_Finder" />
       </list>
     </recent_temporary>
   </component>
@@ -710,34 +662,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_Edges - 2017.03.17 at 16h 25m 00s.xml">
+    <history-entry file="Test_BFS - 2017.03.19 at 10h 15m 24s.xml">
+      <configuration name="Test_BFS" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Test_BFS - 2017.03.19 at 10h 18m 47s.xml">
+      <configuration name="Test_BFS" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 07m 56s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 16h 26m 03s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 08m 09s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 16h 27m 00s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 09m 48s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 16h 27m 22s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 09m 56s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 16h 59m 08s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 10m 07s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 17h 00m 36s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 10m 34s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 17h 00m 50s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 14m 09s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 17h 02m 07s.xml">
-      <configuration name="Test_Edges" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 17h 04m 03s.xml">
-      <configuration name="Test_Edges" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Test_Edges - 2017.03.17 at 17h 04m 47s.xml">
+    <history-entry file="Test_Edges - 2017.03.19 at 10h 14m 47s.xml">
       <configuration name="Test_Edges" configurationId="tests" />
     </history-entry>
   </component>
@@ -751,20 +703,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1366" height="697" extended-state="6" />
+    <frame x="93" y="23" width="1273" height="697" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26807472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854986" sideWeight="0.47229552" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6683938" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2326284" sideWeight="0.5277045" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29305136" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854986" sideWeight="0.47229552" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32642487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26943004" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23151909" sideWeight="0.5277045" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59067357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -772,6 +723,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32642487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -820,7 +772,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="139" />
+      <option name="time" value="146" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -829,13 +781,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stats/Test_Dm_Search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stats/Stats.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1695">
@@ -855,7 +800,7 @@
         <state relative-caret-position="375">
           <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -872,7 +817,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,7 +834,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,7 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="4581" column="22" lean-forward="false" selection-start-line="4581" selection-start-column="16" selection-end-line="4581" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,14 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="2756" column="4" lean-forward="false" selection-start-line="2756" selection-start-column="4" selection-end-line="2756" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stats/Stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2419">
-          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1117,23 +1052,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats/Test_Helpers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stats/Test_Mediator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="54" column="30" lean-forward="false" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,19 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stats/Test_Builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="114" column="62" lean-forward="false" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,47 +1077,77 @@
     <entry file="file://$PROJECT_DIR$/salmon.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats/Stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2419">
+          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats/Test_Helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats/Test_Builder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="62" lean-forward="false" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stats/Test_Edges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="89" column="38" lean-forward="false" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stats/Stats_Graph_Mediator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="153" column="34" lean-forward="false" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
+        <state relative-caret-position="300">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats/Test_Cases_Suite.py">
+    <entry file="file://$PROJECT_DIR$/stats/Test_BFS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        <state relative-caret-position="371">
+          <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stats/Graph_View.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="181" column="42" lean-forward="false" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stats/Test_Edges.py">
+    <entry file="file://$PROJECT_DIR$/stats/Test_Cases_Suite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

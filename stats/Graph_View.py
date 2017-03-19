@@ -1,4 +1,4 @@
-from collections import namedtuple
+from collections import deque, namedtuple
 from typing import Type
 
 Coord = namedtuple('Coord', ('row', 'col'))
@@ -139,7 +139,8 @@ class PSearcher(object):
     def add_edges(self):
         generated_src_node = self.generate_src_node(self.graph.nodes)
 
-        edge_list_generator = lambda src_node: self.generate_edge_list(src_node)
+        edge_list_generator = lambda src_node: self.generate_edge_list(
+            src_node)
 
         generated_edge_list = map(edge_list_generator, generated_src_node)
 
@@ -176,8 +177,9 @@ class PSearcher(object):
             lambda src_dest_edge: self.accumulate_edge_to_list(src_dest_edge,
                                                                list_of_edges)
 
-        single_edge_generator = lambda row, col: self.generate_edge(Coord(row, col),
-                                                                    src_node.coord)
+        single_edge_generator = lambda row, col: self.generate_edge(
+            Coord(row, col),
+            src_node.coord)
 
         top_left = single_edge_generator(top_row, left_col)
         edge_accumulator(top_left)
@@ -213,6 +215,8 @@ class PSearcher(object):
         assert isinstance(src_coord, Coord)
         src_node = self.graph.get_node(src_coord)
         assert isinstance(src_node, PNode)
+        if src_node.value is None:
+            return None
 
         assert isinstance(dest_coord, Coord)
         row = dest_coord.row
@@ -220,20 +224,62 @@ class PSearcher(object):
 
         if row != -1 and col != -1:
             dest_node = self.graph.get_node(dest_coord)
-            if dest_node.has_visitor and src_node.has_visitor:
+            assert isinstance(dest_node, PNode)
+            if dest_node.value is not None:
                 return PEdge(src_node, dest_node)
 
         return None  # Return None
 
-    def dfs_search(self, start_node, connected_nodes):
-        assert isinstance(connected_nodes, list)
+    def dfs_search(self, start_node, list_connected_nodes=None):
+        if list_connected_nodes is None:
+            list_connected_nodes = list()
+        else:
+            assert isinstance(list_connected_nodes, list)
+
         assert isinstance(start_node, PNode)
+        if start_node.value is None:
+            return list_connected_nodes
 
-        connected_nodes.append(start_node)
-        children_of_start_node = self.graph.childrenOf(src_node=start_node)
+        list_connected_nodes.append(start_node)
 
+        children_of_start_node = self.graph.childrenOf(start_node)
         for child in children_of_start_node:
-            if child not in connected_nodes:
-                connected_nodes = self.dfs_search(child, connected_nodes)
+            if child not in list_connected_nodes:
+                list_connected_nodes = \
+                    self.dfs_search(child, list_connected_nodes)
 
-        return connected_nodes
+        return list_connected_nodes
+
+    def bfs_search(self, start_node, graph):
+        self.reset_nodes(graph)
+        assert isinstance(start_node, PNode)
+        if start_node.value is None:
+            return None
+        unvisited_nodes = deque()
+        unvisited_nodes.append(start_node)
+
+        while (unvisited_nodes):
+            visited_node = unvisited_nodes.popleft()
+            assert isinstance(visited_node, PNode)
+            if visited_node.has_visitor is True:
+                continue
+
+            visited_node.set_visitor(has_visitor=True)
+
+            visit_children = graph.childrenOf(visited_node)
+
+            for child_node in visit_children:
+                assert isinstance(child_node, PNode)
+                if child_node.value is not None \
+                        and child_node.has_visitor is False:
+                    unvisited_nodes.append(child_node)
+            yield visited_node
+
+        self.reset_nodes(graph)
+
+    def reset_nodes(self, graph):
+        assert isinstance(graph, PGraph)
+        list_nodes = graph.nodes
+        for node in list_nodes:
+            assert isinstance(node, PNode)
+            node.set_visitor(has_visitor=False)

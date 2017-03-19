@@ -2,6 +2,8 @@ import unittest
 
 from itertools import product
 
+from collections import deque
+
 
 class TestHelpers(unittest.TestCase):
     def test_append(self):
@@ -81,6 +83,26 @@ class TestHelpers(unittest.TestCase):
             col_data = col_model[col_index]
             print('row_data:col_data = {}:{}'.format(row_data, col_data))
             print()
+
+    def test_deque(self):
+        print('test deque')
+        cq = deque()
+        cq.append(1)
+        cq.append(2)
+        cq.append(3)
+        while(cq):
+            print('{}'.format(cq.popleft()), end=' , ')
+        print()
+
+    def test_stack(self):
+        print('test stack')
+        cs = list()
+        cs.append(1)
+        cs.append(2)
+        cs.append(3)
+        while (cs):
+            print('{}'.format(cs.pop()), end=' , ')
+        print()
 
 
 if __name__ == '__main__':
