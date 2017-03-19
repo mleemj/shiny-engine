@@ -28,7 +28,7 @@ class TestEdges(unittest.TestCase):
         print('After marking visitors')
         print('dict_items(num_movies, [age_group])')
         print(data_model.items())
-        mediator.mark_visited_nodes(data_model)
+        mediator.mark_nodes(data_model)
         mediator.print_graph()
 
     def test_add_edges(self):
@@ -44,7 +44,7 @@ class TestEdges(unittest.TestCase):
             if random.random() > 0.5:
                 data_model[movie].append(age)
 
-        mediator.mark_visited_nodes(data_model)
+        mediator.mark_nodes(data_model)
 
         graph = mediator.graph
         path_searcher = PSearcher(graph)

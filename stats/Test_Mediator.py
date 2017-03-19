@@ -48,7 +48,7 @@ class TestMediator(unittest.TestCase):
 
         t2DmDict = patient_group.groupBy(Glucose_HDL_GroupStrategy())
 
-        mediator.mark_visited_nodes(t2DmDict)
+        mediator.mark_nodes(t2DmDict)
 
         graph = mediator.graph
         self.assertIsInstance(graph, PGraph)

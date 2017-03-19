@@ -24,7 +24,7 @@ class TestBFS(unittest.TestCase):
             if random.random() > 0.5:
                 data_model[movie].append(age)
 
-        mediator.mark_visited_nodes(data_model)
+        mediator.mark_nodes(data_model)
 
         graph = mediator.graph
         self.assertIsInstance(graph, PGraph)

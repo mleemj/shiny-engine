@@ -84,30 +84,30 @@ class StatsGraphMediator(object):
     def invert_dict(self, d):
         return dict([(v, k) for k, v in d.items()])
 
-    def mark_visited_nodes(self, data_model):
+    def mark_nodes(self, data_model):
         assert isinstance(data_model, dict)
         list_data_rows = data_model.keys()
 
-        node_generator = lambda data_row: self.generate_visited_node(
+        node_generator = lambda data_row: self.generate_marked_nodes(
             data_row, data_model)
 
         generated_lists = map(node_generator, list_data_rows)
 
         for gen_node in generated_lists:
             try:
-                list_visited_nodes = next(gen_node)  # May raise StopIteration
-                assert isinstance(list_visited_nodes, list)
-                for visited_node in list_visited_nodes:
-                    assert isinstance(visited_node, PNode)
-                    visited_node.set_visitor(has_visitor=True)
+                list_marked_nodes = next(gen_node)  # May raise StopIteration
+                assert isinstance(list_marked_nodes, list)
+                for marked_node in list_marked_nodes:
+                    assert isinstance(marked_node, PNode)
+                    marked_node.set_visitor(has_visitor=True)
             except StopIteration:
                 return  # One of the iterators has been exhausted
 
-    def generate_visited_node(self, data_row, data_model):
+    def generate_marked_nodes(self, data_row, data_model):
         if data_row not in self._row_model:
             raise ValueError('Data row not found in rows model')
 
-        list_visited_nodes = list()
+        list_marked_nodes = list()
 
         list_data_cols = data_model.get(data_row)
 
@@ -121,26 +121,23 @@ class StatsGraphMediator(object):
             if view_coord is None:
                 raise ValueError('Data model not found in view model')
 
-            visited_node = self.graph.get_node(Coord(view_coord[0],
+            node_with_value = self.graph.get_node(Coord(view_coord[0],
                                                      view_coord[1]))
-            if visited_node is None:
+            if node_with_value is None:
                 raise ValueError('Co-ordinates not found in graph')
 
-            assert isinstance(visited_node, PNode)
-            visited_node.set_value(valueObject=DataTuple(row_data=data_row,
+            assert isinstance(node_with_value, PNode)
+            node_with_value.set_value(valueObject=DataTuple(row_data=data_row,
                                                          col_data=data_col))
-            list_visited_nodes.append(visited_node)
+            list_marked_nodes.append(node_with_value)
 
-        yield list_visited_nodes
+        yield list_marked_nodes
 
     def print_graph(self):
         assert isinstance(self.graph, PGraph)
 
         for row_index in range(len(self._row_model)):
-            if row_index < 10:
-                end_row = '\t\t\t\t'
-            else:
-                end_row = '\t\t\t'
+            end_row = '\t\t\t\t'
 
             print('row = {}'.format(row_index), end=end_row)
 
@@ -148,7 +145,7 @@ class StatsGraphMediator(object):
                 coord = Coord(row=row_index, col=col_index)
                 node = self.graph.get_node(coord)
                 assert isinstance(node, PNode)
-                if node.has_visitor is True:
+                if node.value is not None:
                     print(1, end='\t')
                 else:
                     print(0, end='\t')

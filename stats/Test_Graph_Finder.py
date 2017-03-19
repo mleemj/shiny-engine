@@ -24,7 +24,7 @@ class TestGraphFinder(unittest.TestCase):
             data_model[row] = col_list
 
         print()
-        mediator.mark_visited_nodes(data_model)
+        mediator.mark_nodes(data_model)
         graph = mediator.graph
         self.assertIsInstance(graph, PGraph)
         list_visited_nodes = list()

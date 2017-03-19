@@ -55,7 +55,7 @@ class TestBuilder(unittest.TestCase):
     def test_mediator(self):
         mediator = StatsGraphMediator(self.row_model, self.col_model)
 
-        mediator.mark_visited_nodes( self.data_model)
+        mediator.mark_nodes(self.data_model)
 
         graph = mediator.graph
         self.assertIsInstance(graph, PGraph)
@@ -63,7 +63,7 @@ class TestBuilder(unittest.TestCase):
         list_visited_nodes = list()
         for node in graph.nodes:
             self.assertIsInstance(node, PNode)
-            if node.has_visitor:
+            if node.value is not None:
                 list_visited_nodes.append(node)
 
 
