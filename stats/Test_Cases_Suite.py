@@ -11,7 +11,7 @@ from stats.Test_Helpers import TestHelpers
 from stats.Test_Mediator import TestMediator
 from stats.Test_Math import TestMath
 from stats.Test_Stitch_Stats import TestStitchStats
-from stats.Test_Product import TestProduct
+from stats.Test_Simple_Search import TestSimpleSearch
 
 class TestSuiteCases(object):
     def run_tests(self):
@@ -19,7 +19,7 @@ class TestSuiteCases(object):
         test_cases = (TestBFS, TestBuilder, TestDmSearch, TestDmStats,
                       TestEdges,
                       TestGraphFinder, TestHelpers, TestMath, TestMediator,
-                      TestStitchStats, TestProduct)
+                      TestStitchStats, TestSimpleSearch)
         for test_class in test_cases:
             loaded_tests = unittest.defaultTestLoader.loadTestsFromTestCase(
                 testCaseClass=test_class)

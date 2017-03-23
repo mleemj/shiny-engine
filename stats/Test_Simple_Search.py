@@ -8,7 +8,7 @@ from stats.Graph_View import PGraph, SimpleSearcher
 from stats.Stats_Graph_Mediator import StatsGraphMediator
 
 
-class TestProduct(unittest.TestCase):
+class TestSimpleSearch(unittest.TestCase):
     def test_transport_costs(self):
         start = time.time()
         for r_index in range(len(self.rows_data)):
