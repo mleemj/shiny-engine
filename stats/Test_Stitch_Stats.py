@@ -1,11 +1,8 @@
 import random
 import unittest
-from collections import defaultdict
-from itertools import product
 
 from stats.Graph_View import PSearcher, PNode, PGraph, Coord
 from stats.Stats_Graph_Mediator import StatsGraphMediator
-
 from stats.Stitch_Stats import SalesItem, SalesItemByAge, SalesStats
 
 
@@ -34,8 +31,8 @@ class TestStitchStats(unittest.TestCase):
                     salesItemByAge.add_item(item)
             stats.add_sales_item_age(salesItemByAge)
 
-        mediator = StatsGraphMediator(data_row = row_model,
-                                      data_col = col_model)
+        mediator = StatsGraphMediator(data_row=row_model,
+                                      data_col=col_model)
         mediator.mark_nodes(stats.data_model)
 
         graph = mediator.graph
@@ -53,7 +50,8 @@ class TestStitchStats(unittest.TestCase):
             found_connected_nodes = len(DFS_nodes)
             if found_connected_nodes > most_connected_nodes:
                 most_connected_nodes = found_connected_nodes
-            if len(DFS_nodes) is not 0: all_connected_nodes[start_node] = DFS_nodes
+            if len(DFS_nodes) is not 0: all_connected_nodes[
+                start_node] = DFS_nodes
 
         most_revenue = 0
         for connected_nodes in all_connected_nodes.values():
@@ -68,8 +66,6 @@ class TestStitchStats(unittest.TestCase):
 
         print('Most connected area = {}'.format(most_connected_nodes))
         print('Most revenue = {}\n\n'.format(most_revenue))
-
-
 
     def setUp(self):
         num_items = 4
@@ -143,6 +139,7 @@ def test_print_graph(graph, row_model, col_model):
         print('{}'.format(item.revenue),
               end='\t')
     print()
+
 
 if __name__ == '__main__':
     unittest.main()
