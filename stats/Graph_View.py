@@ -132,6 +132,21 @@ class PEdge(object):
         return self._dest_node
 
 
+class SimpleSearcher(object):
+    def __init__(self, graph):
+        self.graph = graph
+
+    def search_by_row(self, row_index):
+        num_cols = self.graph.num_cols
+        list_cols = list()
+        for c in range(num_cols):
+            node = self.graph.get_node(Coord(row_index, c))
+            assert isinstance(node, PNode)
+            if node.value is not None:
+                list_cols.append(c)
+        return list_cols
+
+
 class PSearcher(object):
     def __init__(self, graph):
         self.graph = graph

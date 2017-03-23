@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Max revenue{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <p>
+        <label>Enter number of collections <input type="text"
+                                                 name="nc"> </label>
+    </p>
+    <p><a href=# id=curate>Curate collection</a>
+    <p id=curated_list>
+    </p>
+
+
+    <script type=text/javascript>
+        $jq('a#curate').bind('click', function () {
+            var nc = $jq('input[name="nc"]').val();
+            $jq.getJSON($SCRIPT_ROOT + '/_curate',
+                { num_collections: nc },
+                function (data) {
+                    $jq.each(data, function (index, data) {
+                            var jsonData = index + " = " + data ;
+                            var new_paragraph = $jq("<p>" + jsonData + "</p>")
+                            $jq('#curated_list').append(new_paragraph);
+
+                    });
+                }
+            );
+        });
+    </script>
+{% endblock %}
