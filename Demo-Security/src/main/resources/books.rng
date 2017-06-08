@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="bookstore">
+            <oneOrMore>
+                <element name="book">
+                    <attribute name="category">
+                        <data type="NCName"/>
+                    </attribute>
+                    <optional>
+                        <attribute name="cover">
+                            <data type="NCName"/>
+                        </attribute>
+                    </optional>
+                    <element name="title">
+                        <attribute name="lang">
+                            <data type="NCName"/>
+                        </attribute>
+                        <text/>
+                    </element>
+                    <oneOrMore>
+                        <element name="author">
+                            <text/>
+                        </element>
+                    </oneOrMore>
+                    <element name="year">
+                        <data type="integer"/>
+                    </element>
+                    <element name="price">
+                        <data type="decimal"/>
+                    </element>
+                </element>
+            </oneOrMore>
+        </element>
+    </start>
+</grammar>
