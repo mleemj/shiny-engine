@@ -1,0 +1,24 @@
+<p>
+  greeting-form diagnostics = {{dx_form}}
+</p>
+<!-- div class=container-fluid from BootStrap-->
+<div>
+  <form (ngSubmit)="onSubmit()" #visitorForm="ngForm">
+    <div class="form-group">
+      <label for="visitorNameInput">What is your name?</label>
+      <input type="text" class="form-control" id="visitorNameInput"
+             placeholder="First name"
+             required
+             [(ngModel)]="visitor.visitor_name"
+             name="nameInput"
+             #nameInput="ngModel">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </form>
+</div>
+<!-- Why are there two attributes id and name?
+label references input's id vallue
+ngModel references name attribute and uses #name
+Angular recognizes form-control with name attribute -->
+<!-- ngModel binds to target-form control-->
+<!-- ngModel binds to component's model -->
