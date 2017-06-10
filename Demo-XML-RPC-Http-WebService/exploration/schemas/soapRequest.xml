@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lets="http://lets.go.mars">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <lets:getBook>
+         <lets:booktitle>harry potter and dumbledore</lets:booktitle>
+         <lets:bookauthor>jk rowling</lets:bookauthor>
+         <lets:bookprice>100</lets:bookprice>
+      </lets:getBook>
+   </soapenv:Body>
+</soapenv:Envelope>

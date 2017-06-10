@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e34acdc0-5726-499a-bd20-f3c0e7a0b6fc" activeEnvironment="Default" name="LetsGoMars" resourceRoot="${projectDir}" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="82664efa-368f-4297-a7d3-0f2a667180b8" wsaVersion="NONE" name="PhobosSoapBinding" type="wsdl" bindingName="{http://lets.go.mars}PhobosSoapBinding" soapVersion="1_1" anonymous="optional" definition="Phobos.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/matthewlee/neonjee/workspace/exploration/WebContent/wsdl/Phobos.wsdl"><con:part><con:url>file:/Users/matthewlee/neonjee/workspace/exploration/WebContent/wsdl/Phobos.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://lets.go.mars" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://lets.go.mars" xmlns:intf="http://lets.go.mars" xmlns:tns1="http://butter.peanut.fried" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://lets.go.mars" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://butter.peanut.fried"/>
+      <element name="getBook">
+        <complexType>
+          <sequence>
+            <element name="booktitle" type="xsd:string"/>
+            <element name="bookauthor" type="xsd:string"/>
+            <element name="bookprice" type="xsd:int"/>
+          </sequence>
+        </complexType>
+      </element>
+      <element name="getBookResponse">
+        <complexType>
+          <sequence>
+            <element name="getBookReturn" type="tns1:Book"/>
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+    <schema elementFormDefault="qualified" targetNamespace="http://butter.peanut.fried" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="Book">
+        <sequence>
+          <element name="author" nillable="true" type="xsd:string"/>
+          <element name="price" type="xsd:int"/>
+          <element name="title" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getBookResponse">
+    <wsdl:part element="impl:getBookResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBookRequest">
+    <wsdl:part element="impl:getBook" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Phobos">
+    <wsdl:operation name="getBook">
+      <wsdl:input message="impl:getBookRequest" name="getBookRequest"></wsdl:input>
+      <wsdl:output message="impl:getBookResponse" name="getBookResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PhobosSoapBinding" type="impl:Phobos">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getBook">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getBookRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBookResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhobosService">
+    <wsdl:port binding="impl:PhobosSoapBinding" name="Phobos">
+      <wsdlsoap:address location="http://localhost:8080/exploration/services/Phobos"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/exploration/services/Phobos</con:endpoint></con:endpoints><con:operation id="31e1b16c-1184-4c44-87f9-d7d6ff9374f1" isOneWay="false" action="" name="getBook" bindingOperationName="getBook" type="Request-Response" outputName="getBookResponse" inputName="getBookRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="32e0ca9c-2b73-413c-a211-45256a563e6e" name="GetBookRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/exploration/services/Phobos</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lets="http://lets.go.mars">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <lets:getBook>
+         <lets:booktitle>harry potter and dumbledore</lets:booktitle>
+         <lets:bookauthor>jk rowling</lets:bookauthor>
+         <lets:bookprice>100</lets:bookprice>
+      </lets:getBook>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://lets.go.mars/Phobos/getBookRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="1f176633-d59e-44f6-b4dc-e964465ad6af" name="PhobosSoapBindingTestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="f8690b38-287e-4d56-b5f5-b0cb3af9a1f2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getBook TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="b5f639d5-87f9-433e-bcc3-be6e78010a74" name="getBook"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>PhobosSoapBinding</con:interface><con:operation>getBook</con:operation><con:request name="getBook" id="2bbac897-0f77-4957-9223-e8db39129f6f"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/exploration/services/Phobos</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lets="http://lets.go.mars">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <lets:getBook>
+         <lets:booktitle>?</lets:booktitle>
+         <lets:bookauthor>?</lets:bookauthor>
+         <lets:bookprice>?</lets:bookprice>
+      </lets:getBook>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://lets.go.mars/Phobos/getBookRequest"/></con:request></con:config></con:testStep><con:loadTest id="fa403f99-e811-4577-b137-21df5e9a629e" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

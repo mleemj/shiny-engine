@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PhobosService WSDL service -->
+
+  <service name="Phobos" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://lets.go.mars"/>
+      <parameter name="wsdlServiceElement" value="PhobosService"/>
+      <parameter name="schemaQualified" value="http://lets.go.mars,http://butter.peanut.fried"/>
+      <parameter name="wsdlServicePort" value="Phobos"/>
+      <parameter name="className" value="mars.go.lets.Phobos"/>
+      <parameter name="wsdlPortType" value="Phobos"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://lets.go.mars" xmlns:retNS="http://lets.go.mars" xmlns:rtns="http://butter.peanut.fried" name="getBook" qname="operNS:getBook" returnQName="retNS:getBookReturn" returnType="rtns:Book" soapAction="">
+        <parameter xmlns:pns="http://lets.go.mars" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:booktitle" type="tns:string"/>
+        <parameter xmlns:pns="http://lets.go.mars" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bookauthor" type="tns:string"/>
+        <parameter xmlns:pns="http://lets.go.mars" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:bookprice" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="getBook"/>
+
+      <typeMapping xmlns:ns="http://butter.peanut.fried" qname="ns:Book" type="java:fried.peanut.butter.Book" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>
