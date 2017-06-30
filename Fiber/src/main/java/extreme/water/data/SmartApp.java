@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import extreme.water.data.model.Organization;
 import extreme.water.data.model.SmartRepo;
 
+@Order(value = 1)
 @Component
 public class SmartApp implements CommandLineRunner {
 	private SmartRepo smartRepository;
