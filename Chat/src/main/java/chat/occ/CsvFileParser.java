@@ -7,18 +7,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.core.annotation.Order;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.stereotype.Component;
 
-@Component
-@Order(2)
-public class ParseCmdLine implements CommandLineRunner {
+public class CsvFileParser implements CommandLineRunner {
 	private ResourceLoader resourceLoader;
 
 	@Autowired
-	public ParseCmdLine(ResourceLoader loader) {
+	public CsvFileParser(ResourceLoader loader) {
 		this.resourceLoader = loader;
 	}
 

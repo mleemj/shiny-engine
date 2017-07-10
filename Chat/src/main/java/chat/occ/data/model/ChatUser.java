@@ -1,13 +1,12 @@
 package chat.occ.data.model;
 
-import java.util.ArrayList;
+import java.security.Key;
 import java.util.Collection;
-import java.util.List;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 public class ChatUser extends User {
@@ -15,36 +14,29 @@ public class ChatUser extends User {
 	private String usrName;
 	private String usrEmail;
 	private String usrPassword;
-	private String usrRole;
 	private boolean usrEnabled;
-
-	public ChatUser(Long usrId, String usrName, String usrEmail, String usrPassword, String usrRole,
-			boolean usrEnabled) {
-		super(usrName, usrPassword, GetAuthorities(usrRole));
+	private Collection<GrantedAuthority> usrAuthorities;
+	// immutable key
+	final private Key chatUsrJwtKey;
+	
+	public ChatUser(Long usrId, String usrName, String usrEmail, String usrPassword,
+			Collection<GrantedAuthority> authorites, boolean usrEnabled) {
+		super(usrName, usrPassword, authorites);
 		this.usrId = usrId;
 		this.usrName = usrName;
 		this.usrEmail = usrEmail;
 		this.usrPassword = usrPassword;
-		this.usrRole = usrRole;
 		this.usrEnabled = usrEnabled;
+		this.usrAuthorities = authorites;
+		this.chatUsrJwtKey = ChatJwtHelper.generateKey();
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		return sb.append(getUsrId())
-				.append(' ')
-				.append(getUsrName())
-				.append(' ')
-				.append(getUsrEmail())
-				.append(' ')
-				.append(getUsrPassword())
-				.append(' ')
-				.append(getUsrRole())
-				.append(' ')
-				.append(getUsrEnabled())
-				.append(' ')
-				.toString();
+		return sb.append(getUsrId()).append(' ').append(getUsrName()).append(' ').append(getUsrEmail()).append(' ')
+				.append(getUsrPassword()).append(' ').append(getAuthorities()).append(' ').append(getUsrEnabled())
+				.append(' ').toString();
 	}
 
 	@Override
@@ -97,14 +89,6 @@ public class ChatUser extends User {
 		this.usrPassword = usrPassword;
 	}
 
-	public String getUsrRole() {
-		return usrRole;
-	}
-
-	public void setUsrRole(String usrRole) {
-		this.usrRole = usrRole;
-	}
-
 	public boolean getUsrEnabled() {
 		return usrEnabled;
 	}
@@ -113,10 +97,19 @@ public class ChatUser extends User {
 		this.usrEnabled = usrEnabled;
 	}
 
-	public static Collection<GrantedAuthority> GetAuthorities(String usrRole) {
-		List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		SimpleGrantedAuthority sga = new SimpleGrantedAuthority(usrRole);
-		authorities.add(sga);
-		return authorities;
+	public Collection<GrantedAuthority> getAuthorities() {
+		return this.usrAuthorities;
+	}
+
+	public Collection<GrantedAuthority> getUsrAuthorities() {
+		return usrAuthorities;
+	}
+
+	public void setUsrAuthorities(Collection<GrantedAuthority> usrAuthorities) {
+		this.usrAuthorities = usrAuthorities;
+	}
+
+	public Key getChatUsrJwtKey() {
+		return chatUsrJwtKey;
 	}
 }

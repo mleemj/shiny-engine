@@ -10,16 +10,16 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import chat.occ.data.ChatMsgUserPersistence;
+import chat.occ.data.ChatUsrPersistence;
 import chat.occ.data.model.ChatUser;
 
 @Order(1)
 @Component
 public class ChatApplication implements CommandLineRunner {
-	private ChatMsgUserPersistence chatPersist;
+	private ChatUsrPersistence chatPersist;
 
 	@Autowired
-	public ChatApplication(ChatMsgUserPersistence persistenceService) {
+	public ChatApplication(ChatUsrPersistence persistenceService) {
 		this.chatPersist = persistenceService;
 	}
 
@@ -36,10 +36,9 @@ public class ChatApplication implements CommandLineRunner {
 		
 		logger.info("----- inside ChatApplication.findUserByEmail -----");
 		for(String e: emails){
-			ChatUser cuByEmail = this.chatPersist.getChatUsrByEmail(e);
+			ChatUser cuByEmail = this.chatPersist.getUsrByEusr(e);
 			logger.info(cuByEmail.toString());
 		}
-		
 		logger.info("----- end ChatApplication -----");
 	}
 
