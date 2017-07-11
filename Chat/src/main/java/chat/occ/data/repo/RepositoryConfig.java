@@ -33,7 +33,7 @@ public class RepositoryConfig {
 	@Primary
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		logger.debug("----- inside AUthUsrConfig -----");
+		logger.debug("----- inside RepositoryConfig -----");
 		logger.debug(env.getProperty("chat.datasource.driver-class-name"));
 		dataSource.setDriverClassName(env.getProperty("chat.datasource.driver-class-name"));
 		dataSource.setUrl(env.getProperty("chat.datasource.url"));
