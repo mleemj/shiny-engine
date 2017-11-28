@@ -6,7 +6,13 @@
                                     {outlets: {
                                       'port': ['algo_list'],
                                       'starboard': ['algo_detail']
-                                      }}]">Solve Algorithm</a>/li>
+                                      }}]">Algorithms</a>/li>
+      <li><a [routerLink]="['/data',
+                                    {outlets: {
+                                      'port': ['build_data'],
+                                      'starboard': ['read_data']
+                                      }}]">Data</a>/li>
+      <li><a [routerLink]="['/game']">New Game</a></li>
     </ul>
   </div>
   <div class="row"><router-outlet></router-outlet></div>

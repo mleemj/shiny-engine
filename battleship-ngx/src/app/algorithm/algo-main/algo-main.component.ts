@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./algo-main.component.css']
 })
 export class AlgoMainComponent implements OnInit {
+  algorithmId: 'A1';
 
   constructor() { }
 
