@@ -4,6 +4,15 @@ import os, re
 from concurrent import futures
 import time
 
+
+"""
+    Demonstrates the following concepts:
+    1. Get resource from Flask instance folder
+    2. Regular expression to tokenize string
+    3. How to use functools.wrap a co-routine to prime a generator
+    4. How to use concurrency futures
+    5. How to use ThreadPoolExecutor 
+"""
 # app's default instance path works when running from command-line
 # app = Flask(__name__)
 # absolute path has to be provided when running application from PyCharm
