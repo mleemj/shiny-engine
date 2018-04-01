@@ -17,7 +17,7 @@ import com.solx.repo.UsrRepo;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserRepositoryTests {
+public class UsrRepoTests {
 
 	@Autowired
 	UsrRepo repository;
@@ -51,8 +51,13 @@ public class UserRepositoryTests {
 		dave.setCity(chi);
 		dave.setState(illinois);
 		Usr d = repository.save(dave);
-
+		
 		assertThat(d.id).isNotNull();
+		
+		System.out.println("Test setsIdOnSave");
+		System.out.println("---------------------------------");
+		System.out.println(dave);
+		System.out.println();
 	}
 
 	@Test
@@ -65,6 +70,11 @@ public class UserRepositoryTests {
 		Usr oliverA = repository.findByPhoneHome(oliverHome);
 		Usr oliverB = repository.findByPhoneOffice(oliverOffice);
 		assertEquals(oliverA, oliverB);
+		
+		System.out.println("Test findsByPhone");
+		System.out.println("---------------------------------");
+		System.out.println(oliver);
+		System.out.println();
 	}
 
 	@Test
@@ -81,8 +91,20 @@ public class UserRepositoryTests {
 		
 		List<Usr> stateUsr = repository.findByState(illinois);
 		assertEquals(2, stateUsr.size());
-
+		
 		List<Usr> citiUsr = repository.findByCity(chi);
 		assertEquals(1, citiUsr.size());
+		
+		System.out.println("Test findsByLocation state");
+		System.out.println("---------------------------------");
+		stateUsr.forEach(u -> System.out.println(u));
+		System.out.println();
+		
+		System.out.println("Test findsByLocation city");
+		System.out.println("---------------------------------");		
+		citiUsr.forEach(u -> System.out.println(u));
+		System.out.println();
+		
+		
 	}
 }

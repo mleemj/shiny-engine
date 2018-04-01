@@ -44,7 +44,7 @@ public class Usr {
 
 	@Indexed
 	private String state;
-	
+
 	@Indexed
 	private String city;
 
@@ -53,7 +53,7 @@ public class Usr {
 		if (!(other instanceof Usr))
 			return false;
 		Usr oUser = (Usr) other;
-		if (StringUtils.compare(oUser.email, this.email) == 0 
+		if (StringUtils.compare(oUser.email, this.email) == 0
 				|| StringUtils.compare(oUser.phoneHome, this.phoneHome) == 0
 				|| StringUtils.compare(oUser.phoneOffice, this.phoneOffice) == 0) {
 			return true;
@@ -71,11 +71,8 @@ public class Usr {
 	@Override
 	public String toString() {
 		StringBuilder sbldr = new StringBuilder();
-		sbldr.append(this.name)
-			.append("\nO:").append(this.phoneOffice)
-			.append("\nH:").append(this.phoneHome)
-			.append("\nCity:").append(this.city)
-			.append("\nState:").append(this.state);
+		sbldr.append(this.name).append("\nO:").append(this.phoneOffice).append("\nH:").append(this.phoneHome)
+				.append("\nCity:").append(this.city).append("\nState:").append(this.state);
 		return sbldr.toString();
 	}
 
