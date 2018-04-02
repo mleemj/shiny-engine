@@ -106,8 +106,12 @@ class HourGlass(object):
         col = jndx + 1
         return self.arr[row][col]
 
+# Call functions after the function is created
 
 if __name__ == '__main__':
+    a = list({1, 2, 3})
+    a += a
+    print(a)
     hg = HourGlass()
     t0 = time.time()
     hg.generator_multiple_hr()
