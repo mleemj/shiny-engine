@@ -35,3 +35,5 @@ NODE_HOME=/Users/matt/opt/packages/node-v6
 export NODE_HOME
 
 export PATH=${NODE_HOME}/bin:${MAVEN_HOME}/bin:${ANT_HOME}/bin:${JAVA_HOME}/bin:${PATH}
+
+pip install -r requirements.txt -> install everything in the requirements 
