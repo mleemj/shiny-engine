@@ -1,6 +1,0 @@
-HTTP/1.1 200 
-Content-Type: text/xml;charset=UTF-8
-Transfer-Encoding: chunked
-Date: Sat, 10 Jun 2017 18:54:54 GMT
-
-<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><getBookResponse xmlns="http://lets.go.mars"><getBookReturn><author>JK ROWLING</author><price>200</price><title>HARRY POTTER AND DUMBLEDORE</title></getBookReturn></getBookResponse></soapenv:Body></soapenv:Envelope>
