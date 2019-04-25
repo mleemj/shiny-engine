@@ -4,7 +4,7 @@ from django.shortcuts import reverse
 
 
 class Blogger(models.Model):
-    user = models.OneToOneField(User, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     bio = models.TextField(
         max_length=400, blank=True, help_text="Enter your bio details here."
     )

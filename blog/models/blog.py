@@ -16,6 +16,7 @@ class Blog(models.Model):
 
     class Meta:
         ordering = ["post_date"]
+        permissions = (("can_add_comment", "Add comment to blog"),)
 
     def get_absolute_url(self):
         # id = models.AutoField(primary_key=True)
