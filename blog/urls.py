@@ -14,7 +14,7 @@ urlpatterns = [
     path("blogs/", BlogListView.as_view(), name="blogs"),  # all blogs
     path(
         "blogger/<int:pk>", BlogListbyAuthorView.as_view(), name="blogs-by-author"
-    ),  # pk is user_id
+    ),  # pk is blogger_id
     path(
         "blogger/<int:pk>/blog/", BlogCreateView.as_view(), name="blog-create"
     ),  # pk is user_id

@@ -13,8 +13,8 @@ class BloggerProfileView(APIView):
     renderer_classes = [JSONRenderer, TemplateHTMLRenderer]
 
     def get(self, request, pk, *args, **kwargs):
-        user = get_object_or_404(User, pk=pk)
-        blogger = Blogger.objects.get(user=user)
+        user = get_object_or_404(User, id=pk)
+        blogger = get_object_or_404(Blogger, user=user)
         serializer = BloggerSerializer(blogger)
         return Response(
             {"serializer": serializer, "blogger": blogger.user},
@@ -22,7 +22,9 @@ class BloggerProfileView(APIView):
         )
 
     def post(self, request, pk, *args, **kwargs):
-        user = get_object_or_404(User, pk=pk)
+        user = get_object_or_404(User, id=pk)
+        blogger = get_object_or_404(Blogger, user=user)
         bio = request.data.get("bio")
-        Blogger.objects.filter(user=user).update(bio=bio)
-        return redirect("blogs-by-author", pk=pk)
+        blogger.bio = bio
+        blogger.save()
+        return redirect("blogs-by-author", pk=blogger.id)

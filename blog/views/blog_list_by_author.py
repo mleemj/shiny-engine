@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.renderers import TemplateHTMLRenderer, JSONRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.db.models import Q
 
 from blog.models.blog import Blog
 from blog.models.blogger import Blogger
@@ -17,7 +18,6 @@ class BlogListbyAuthorView(APIView):
     template_name = "blog/blog_list_by_author.html"
 
     def get(self, request, pk, *args, **kwargs):
-        user = get_object_or_404(User, pk=pk)
-        blogger = Blogger.objects.get(user=user)
-        blogs_by_author = Blog.objects.filter(blogger=blogger.user)
+        blogger = Blogger.objects.get(Q(id=pk))
+        blogs_by_author = Blog.objects.filter(blogger=blogger)
         return Response({"blog_list": blogs_by_author, "blogger": blogger})
