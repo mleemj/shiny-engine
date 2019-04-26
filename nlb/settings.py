@@ -82,7 +82,7 @@ WSGI_APPLICATION = "nlb.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "blog",
+        "NAME": "diy",
         "USER": "admin",
         "PASSWORD": "admin",
         "HOST": "localhost",
