@@ -25,10 +25,10 @@ class SignupView(APIView):
             user = User.objects.create_user(username=username, password=password)
         else:
             user = User.objects.get_by_natural_key(username=username)
-        DIY_GROUP_ID = 1
-        diy_group = Group.objects.get(id=DIY_GROUP_ID)
+        MEMBER_GROUP_ID = 1
+        member_group = Group.objects.get(id=MEMBER_GROUP_ID)
         blogger = Blogger.objects.update_or_create(user=user)
-        diy_group.user_set.add(user)
+        member_group.user_set.add(user)
 
         return HttpResponseRedirect(
             redirect_to=reverse("login")
