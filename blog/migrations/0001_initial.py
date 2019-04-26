@@ -10,51 +10,109 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-    ]
+    dependencies = [migrations.swappable_dependency(settings.AUTH_USER_MODEL)]
 
     operations = [
         migrations.CreateModel(
-            name='Blog',
+            name="Blog",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('description', models.TextField(help_text='Enter your blog text here', max_length=2000)),
-                ('post_date', models.DateField(default=datetime.date.today)),
-                ('blogger', models.OneToOneField(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                (
+                    "description",
+                    models.TextField(
+                        help_text="Enter your blog text here", max_length=2000
+                    ),
+                ),
+                ("post_date", models.DateField(default=datetime.date.today)),
+                (
+                    "blogger",
+                    models.OneToOneField(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['post_date'],
-                'permissions': (('can_add_comment', 'Add comment to blog'),),
+                "ordering": ["post_date"],
+                "permissions": (("can_add_comment", "Add comment to blog"),),
             },
         ),
         migrations.CreateModel(
-            name='BlogComment',
+            name="BlogComment",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.TextField(help_text='Enter comment about blog here.', max_length=1000)),
-                ('post_date', models.DateTimeField(auto_now_add=True)),
-                ('blog', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.Blog')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "description",
+                    models.TextField(
+                        help_text="Enter comment about blog here.", max_length=1000
+                    ),
+                ),
+                ("post_date", models.DateTimeField(auto_now_add=True)),
+                (
+                    "blog",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="blog.Blog"
+                    ),
+                ),
             ],
-            options={
-                'ordering': ['post_date'],
-            },
+            options={"ordering": ["post_date"]},
         ),
         migrations.CreateModel(
-            name='Blogger',
+            name="Blogger",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('bio', models.TextField(blank=True, help_text='Enter your bio details here.', max_length=400)),
-                ('user', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "bio",
+                    models.TextField(
+                        blank=True,
+                        help_text="Enter your bio details here.",
+                        max_length=400,
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
-            options={
-                'ordering': ['user', 'bio'],
-            },
+            options={"ordering": ["user", "bio"]},
         ),
         migrations.AddField(
-            model_name='blogcomment',
-            name='blogger',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='blog.Blogger'),
+            model_name="blogcomment",
+            name="blogger",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="blog.Blogger",
+            ),
         ),
     ]

@@ -1,4 +1,5 @@
 {% extends "base_generic.html" %}
+{% load rest_framework %}
 
 {% block content %}
     <h1>Blogger: {{blogger}}</h1>
@@ -6,8 +7,6 @@
     <h3>Bio</h3>
     
     <p>{{blogger.bio}}</p>
-    
-    
 
     {% if blog_list %}
     <h3>Blogs list</h3>
@@ -23,6 +22,8 @@
 
     {% else %}
       <p>This blogger hasn't posted anything yet.</p>
-    {% endif %}       
+    {% endif %}
+
+
 {% endblock %}
 

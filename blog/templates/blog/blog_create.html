@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% load rest_framework %}
+<h1>Blogger: {{blogger}}</h1>
+
+{% block title %}Create Blog{% endblock %}
+
+{% block content %}
+    <form action="{% url 'blog-create' pk=blogger.id %}" method="post">
+        {% csrf_token %}
+        <table>
+            {% render_form serializer %}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
