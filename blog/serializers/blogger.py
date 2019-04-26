@@ -6,4 +6,4 @@ from blog.models.blogger import Blogger
 class BloggerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blogger
-        fields = "__all__"
+        fields = ("bio",)

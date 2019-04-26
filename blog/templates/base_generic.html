@@ -24,6 +24,9 @@
     <li><a href="{% url 'index' %}">Home</a></li>
     <li><a href="{% url 'blogs' %}">All blogs</a></li>
     <li><a href="{% url 'bloggers' %}">All bloggers</a></li>
+    {% if user.is_authenticated %}
+      <li><a href="{% url 'blogger-profile' pk=user.id %}">Bio</a></li>
+    {% endif %}
   </ul>
   
   <ul class="sidebar-nav">

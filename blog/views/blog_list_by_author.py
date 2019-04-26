@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
@@ -16,6 +17,7 @@ class BlogListbyAuthorView(APIView):
     template_name = "blog/blog_list_by_author.html"
 
     def get(self, request, pk, *args, **kwargs):
-        blogger = get_object_or_404(Blogger, pk=pk)
+        user = get_object_or_404(User, pk=pk)
+        blogger = Blogger.objects.get(user=user)
         blogs_by_author = Blog.objects.filter(blogger=blogger.user)
         return Response({"blog_list": blogs_by_author, "blogger": blogger})
