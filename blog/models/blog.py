@@ -8,7 +8,9 @@ from blog.models.blogger import Blogger
 
 class Blog(models.Model):
     name = models.CharField(max_length=200)
-    blogger = models.ForeignKey(Blogger, on_delete=models.SET_NULL, null=True)
+    blogger = models.ForeignKey(
+        Blogger, on_delete=models.CASCADE, related_name="blogs"
+    )  # specify related_name is required for mapping relationship
     description = models.TextField(
         max_length=2000, help_text="Enter your blog text here"
     )

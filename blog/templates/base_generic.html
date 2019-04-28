@@ -27,6 +27,7 @@
     {% if user.is_authenticated %}
       <li><a href="{% url 'blogger-profile' pk=user.id %}">Bio</a></li>
       <li><a href="{% url 'blog-create' pk=user.id %}">Create</a></li>
+      <li><a href="{% url 'my-blog' pk=user.id %}">My Blogs</a></li>
     {% endif %}
   </ul>
   

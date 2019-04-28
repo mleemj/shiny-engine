@@ -8,13 +8,15 @@ from blog.views.blog_list_by_author import BlogListbyAuthorView
 from blog.views.blogger_list import BloggerListView
 from blog.views.blogger_profile import BloggerProfileView
 from blog.views.index import IndexView
+from blog.views.my_blog import MyBlogView
 
 urlpatterns = [
     path("", IndexView.as_view(), name="index"),
     path("blogs/", BlogListView.as_view(), name="blogs"),  # all blogs
     path(
-        "blogger/<int:pk>", BlogListbyAuthorView.as_view(), name="blogs-by-author"
+        "blogger/<int:pk>/", BlogListbyAuthorView.as_view(), name="blogs-by-author"
     ),  # pk is blogger_id
+    path("blogger/<int:pk>/blogs/", MyBlogView.as_view(), name="my-blog"),
     path(
         "blogger/<int:pk>/blog/", BlogCreateView.as_view(), name="blog-create"
     ),  # pk is user_id
