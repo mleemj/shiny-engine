@@ -30,7 +30,12 @@ class MyBlogView(APIView):
         if formset.is_valid():
             for form in formset:
                 blogId = form.cleaned_data.get("id")
+                name = form.cleaned_data.get("name")
+                description = form.cleaned_data.get("description")
                 can_delete = form.cleaned_data.get("DELETE")
-                print("Blog {} Can delete {}".format(blogId, can_delete))
+                if can_delete:
+                    Blog.objects.filter(id=blogId).delete()
+                else:
+                    Blog.objects.filter(id=blogId).update(name=name, description=description)
 
         return redirect("blogs-by-author", pk=blogger.id)
