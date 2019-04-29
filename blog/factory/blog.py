@@ -1,8 +1,8 @@
-from factory.django import DjangoModelFactory
 import factory
+from factory.django import DjangoModelFactory
 
-from blog.models.blog import Blog
 from blog.factory.blogger import BloggerFactory
+from blog.models.blog import Blog
 
 
 class BlogFactory(DjangoModelFactory):

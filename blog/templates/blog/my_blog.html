@@ -6,7 +6,9 @@
 
 <form action="{% url 'my-blog' pk=blogger.id %}" method="post">
     {% csrf_token %}
-    {{ form.as_ul }}
+    <table>
+        {{ formset.as_p }}
+    </table>
     <input type="submit" value="Submit"/>
 </form>
 
