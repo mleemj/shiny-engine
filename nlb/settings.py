@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'oauth2_provider',
     "rest_framework",  # Add django-rest-framework
     "blog.apps.BlogConfig",  # Add blog with full namespace
     "accounts.apps.AccountsConfig",
-    'oauth2_provider',
     'corsheaders',
 ]
 
@@ -86,6 +86,11 @@ CORS_ORIGIN_WHITELIST = (
     '127.0.0.1:5000',
 )
 
+OAUTH2_PROVIDER = {
+    # this is the list of available scopes
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'}
+}
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -103,6 +108,9 @@ DATABASES = {
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
     )
 }
 
