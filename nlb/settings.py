@@ -21,13 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = "o68+0ziqi)lr54#lc_n=9i6h_4(bpc#yc5v)fl(av!n666^4@&"
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY", "o68+0ziqi)lr54#lc_n=9i6h_4(bpc#yc5v)fl(av!n666^4@&"
-)
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "o68+0ziqi)lr54#lc_n=9i6h_4(bpc#yc5v)fl(av!n666^4@&")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DJANGO_DEBUG", True))
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # Set hosts to allow any app on Heroku and the local testing URL
 ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "localhost"]
@@ -50,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     'corsheaders.middleware.CorsMiddleware',
     "django.middleware.common.CommonMiddleware",
