@@ -14,7 +14,6 @@ client_secret = "client-secret"
 authorization_base_url = "http://localhost:8000/o/authorize"
 token_url = "http://localhost:8000/o/token/"
 
-
 @app.route("/")
 def demo():
     provider = OAuth2Session(client_id)
@@ -49,7 +48,7 @@ def callback():
 @app.route("/apiendpot")
 def apiendpoint():
     """Use access token to get blogger's profile using pk=1"""
-    provider = OAuth2Session(client_secret, token=session["oauth_token"])
+    provider = OAuth2Session(client_secret, token=session["oauth_token"], scope="read")
     return jsonify(provider.get("http://127.0.0.1:8000/diy/api/profile/1").json())
 
 

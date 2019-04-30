@@ -8,8 +8,10 @@ from blog.serializers.blogger import BloggerSerializer
 
 class APIEndpoint(ProtectedResourceView):
     """Test OAuth workflow
-    Get access token using password grant type
-    curl -u <client-id>:<client-secret> http://localhost:8000/o/token/ -d 'grant_type=password&username=<username>&password=<password>'
+    When trying to access the API using a browser, there will be a 403 authorization error.
+
+    Get access token using client_credentials grant type
+    curl -u <client-id>:<client-secret> http://localhost:8000/o/token/ -d 'grant_type=client_credentials>'
 
     Use access token to access protected resource
     curl -X GET --header "Authorization: Bearer <access-token>" "http://127.0.0.1:8000/diy/api/profile/1"
