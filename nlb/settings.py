@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get(
 DEBUG = bool(os.environ.get("DJANGO_DEBUG", True))
 
 # Set hosts to allow any app on Heroku and the local testing URL
-ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "localhost"]
 
 # Application definition
 
@@ -44,11 +44,14 @@ INSTALLED_APPS = [
     "rest_framework",  # Add django-rest-framework
     "blog.apps.BlogConfig",  # Add blog with full namespace
     "accounts.apps.AccountsConfig",
+    'oauth2_provider',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -76,6 +79,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "nlb.wsgi.application"
 
+# For demo purposes only
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
+    '127.0.0.1:5000',
+)
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -90,6 +100,11 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

@@ -9,7 +9,7 @@ from blog.views.blogger_list import BloggerListView
 from blog.views.blogger_profile import BloggerProfileView
 from blog.views.index import IndexView
 from blog.views.my_blog import MyBlogView
-
+from blog.views.api_endpoint import APIEndpoint
 urlpatterns = [
     path("", IndexView.as_view(), name="index"),
     path("blogs/", BlogListView.as_view(), name="blogs"),  # all blogs
@@ -32,4 +32,7 @@ urlpatterns = [
     path(
         "blog/<int:pk>/comment/", BlogCommentCreate.as_view(), name="blog-comment"
     ),  # pk is blog_id
+    path(
+        "api/profile/<int:pk>", APIEndpoint.as_view(), name="apiendpoint"
+    )
 ]
