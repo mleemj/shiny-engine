@@ -5,21 +5,22 @@
 
 <h2>Features</h2>
 The main features that have currently been implemented are:
-
-<ul>
-  <li>There are models for blog, blogger and blogcomments.</li>
-  <li>User registration, login and logout.</li>
-  <li>User can view list and detail information for blog and blogger.</li>
-   <li>Blogger can make comments on blogs.</li>
-  <li>Blogger can create and edit bio.</li>
-  <li>Blogger can create, edit and delete blogs.</li>
-</ul>
-
+<div>
+    <ul>
+        <li>There are models for blog, blogger and blogcomments.</li>
+        <li>User registration, login and logout.</li>
+        <li>User can view list and detail information for blog and blogger.</li>
+        <li>Blogger can make comments on blogs.</li>
+        <li>Blogger can create and edit bio.</li>
+        <li>Blogger can create, edit and delete blogs.</li>
+    </ul>
+</div>
 <h2>OAuth2 workflow</h2>
 The main features that are currently implemented include:
-
-<ul>
-  <li>Blogger can register an OAuth2 client.</li>
-  <li>Using client_credentials and passowrd grant-types, user can cURL request for an access token.</li>
-  <li>Demo OAuth2 client is provided in this repository to demonstrate authorization code grant type.</li>
-</ul>
+<div>
+    <ul>
+        <li>Blogger can register an OAuth2 client.</li>
+        <li>For client_credentials and password grant types, blogger can cURL to request for an access token and then use the access token to access a protected resource.</li>
+        <li>For authorization code grant type, there is a demo client in the git repo.</li>
+    </ul>
+</div>
